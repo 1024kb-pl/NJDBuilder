@@ -1,5 +1,7 @@
 package com.company;
 
+import java.time.LocalDateTime;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,10 +11,21 @@ public class Main {
                 .age(12)
                 .gender(Gender.FEMALE)
                 .furColor("KOLOREK")
-                .height(10)
-                .weight(5)
                 .build();
 
+        Article article = Article.builder()
+                .id(1L)
+                .title("Tytuł")
+                .text("TRESC")
+                .publishedDate(LocalDateTime.now())
+                .tag("TAG_1")
+                .tag("TAG_2")
+                .and()
+                .author("AUTOR")
+                .build();
+
+        System.out.println(camel);
+        System.out.println(article);
 
     }
 }

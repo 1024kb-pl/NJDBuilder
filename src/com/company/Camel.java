@@ -9,7 +9,20 @@ class Camel {
     private final double height;
     private final String colorFur;
 
-    public Camel(Long id, String name, int age, Gender gender, double weight, double height, String colorFur) {
+    @Override
+    public String toString() {
+        return "Camel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", weight=" + weight +
+                ", height=" + height +
+                ", colorFur='" + colorFur + '\'' +
+                '}';
+    }
+
+    Camel(Long id, String name, int age, Gender gender, double weight, double height, String colorFur) {
         this.id = id;
         this.name = name;
         this.age = age;
